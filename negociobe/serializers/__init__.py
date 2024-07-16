@@ -1,1 +1,1 @@
-from .NegocioSerializer import NegocioSerializer
+from .negocio_serializer import NegocioSerializer
