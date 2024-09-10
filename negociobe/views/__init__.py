@@ -1,3 +1,3 @@
-from negociobe.views.negocio_view import NegocioCreateView
+from negociobe.views.negocio_view import CreateNegocioView
 
-__all__ = ['NegocioCreateView']
+__all__ = ['CreateNegocioView']

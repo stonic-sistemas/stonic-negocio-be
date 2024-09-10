@@ -1,9 +1,9 @@
 from django.db import models
 
 class Caja(models.Model):
-    idcaja = models.AutoField(primary_key=True)
-    idsucursal = models.ForeignKey('negociobe.Sucursal', on_delete=models.DO_NOTHING, db_column='idsucursal')
+    idcaja = models.BigIntegerField(primary_key=True)
+    idsucursal = models.IntegerField(blank=True, null=True)
     numero = models.IntegerField(blank=True, null=True)
 
     class Meta:
-        db_table = 'gen_caja'
+        db_table = 'neg_caja'

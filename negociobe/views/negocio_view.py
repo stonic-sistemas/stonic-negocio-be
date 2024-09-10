@@ -17,12 +17,12 @@ class CreateNegocioView(APIView):
             p_idusuario = serializer.validated_data['idusuario']
             p_nombrenegocio = serializer.validated_data['nombrenegocio']
             p_telefono = serializer.validated_data['telefono']
-            p_idtiponegocio = serializer.validated_data['idtiponegocio']
+            p_idcategorianegocio = serializer.validated_data['idcategorianegocio']
             p_ruc = serializer.validated_data['ruc']
 
             with connection.cursor() as cursor:
-                cursor.callproc('gen_man_negocio_ins', [
-                    p_idusuario, p_nombrenegocio, p_telefono, p_idtiponegocio, p_ruc
+                cursor.callproc('pos_man_negocio_ins', [
+                    p_idusuario.idusuario, p_nombrenegocio, p_telefono, p_idcategorianegocio.idcategorianegocio, p_ruc
                 ])
                 result = cursor.fetchone()
 
